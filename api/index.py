@@ -3,9 +3,9 @@ from flask import Flask, make_response, jsonify
 app = Flask(__name__)
 
 
-@app.route('/api/hello', methods=['GET'])
+@app.route('/flask', methods=['GET'])
 def hello_world():
-    res = {'message': 'Olá, FLASK 2!'}
+    res = 'API FLASK: ONLINE'
     return make_response(jsonify(res))
 
 
