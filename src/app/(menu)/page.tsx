@@ -1,3 +1,6 @@
+import ButtonLogout from "./ButtonLogout";
+import Saudacoes from "./Saudacoes";
+
 async function getData() {
   const api = "http://127.0.0.1:3000/api-py/flask";
 
@@ -12,14 +15,16 @@ async function getData() {
 export default async function Home() {
   const dataPy = await getData();
   const dataNext = await fetch("http://127.0.0.1:3000/api").then((res) => res.json());
-  console.log(dataPy);
-  console.log(dataNext);
 
   return (
     <div className="flex min-h-screen flex-col items-center p-24 bg-slate-900 text-slate-500">
-      <div>{dataPy}</div>
+      <Saudacoes/>
+      <div className="mt-8">{dataPy}</div>
       <div>--------------</div>
       <div>{dataNext}</div>
+      <div className="mt-8">
+        <ButtonLogout/>
+      </div>
     </div>
   );
 }

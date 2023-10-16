@@ -3,6 +3,7 @@ import jwt, { JsonWebTokenError } from "jsonwebtoken";
 import { headers } from "next/headers";
 
 export async function GET(req: Request, res: Response) {
+
   // Pega o token que esta no header da solicitação
   const headersInstance = headers();
   const authorization = headersInstance.get("authorization")?.split(" ")[1];
