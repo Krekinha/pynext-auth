@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "fastapi-dev": "pip3 install -r requirements.txt && python -m uvicorn api.index:app --reload",
+    "next-dev": "next dev",
+    "dev": "concurrently \"npm run next-dev\" \"npm run fastapi-dev\"",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -11,9 +13,10 @@
   "dependencies": {
     "@prisma/client": "^5.4.2",
     "bcrypt": "^5.1.1",
+    "concurrently": "^8.2.2",
     "jose": "^4.15.3",
     "jsonwebtoken": "^9.0.2",
-    "next": "^13.5.4",
+    "next": "^14.2.5",
     "next-auth": "^4.23.2",
     "react": "^18",
     "react-dom": "^18"
