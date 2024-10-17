@@ -62,6 +62,10 @@ export default function Page() {
 				</button>
 				<p className="text-sm text-center">{msg}</p>
 			</form>
+			<span className="text-xs text-center">
+				Para testar o login, use o e-mail: <strong>john@example.com</strong> e
+				senha: <strong>123456</strong>
+			</span>
 		</div>
 	);
 }
