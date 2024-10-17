@@ -1,5 +1,6 @@
 import ButtonLogout from "./ButtonLogout";
 import Saudacoes from "./Saudacoes";
+import ButtonScript from "./ButtonScript";
 
 async function getData() {
   const api = "http://127.0.0.1:3000/api-py/flask";
@@ -24,6 +25,7 @@ export default async function Home() {
       <div>{dataNext}</div>
       <div className="mt-8">
         <ButtonLogout/>
+        <ButtonScript/>
       </div>
     </div>
   );
